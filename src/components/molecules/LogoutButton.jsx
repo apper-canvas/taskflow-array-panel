@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
-import { AuthContext } from '../../App'
+import { useAuth } from '@/layouts/Root'
 import Button from '@/components/atoms/Button'
 import ApperIcon from '@/components/ApperIcon'
 import { toast } from 'react-toastify'
 
 const LogoutButton = () => {
-  const { logout } = useContext(AuthContext)
+  const { logout } = useAuth()
   const user = useSelector((state) => state.user.user)
   
   const handleLogout = async () => {

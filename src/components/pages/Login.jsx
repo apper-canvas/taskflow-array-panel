@@ -1,10 +1,8 @@
-import { useEffect, useContext } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { AuthContext } from '../../App'
-
+import { useAuth } from '@/layouts/Root'
 function Login() {
-  const { isInitialized } = useContext(AuthContext)
-  
+const { isInitialized } = useAuth()
   useEffect(() => {
     if (isInitialized) {
       const { ApperUI } = window.ApperSDK

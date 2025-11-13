@@ -1,0 +1,172 @@
+{
+  "/": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Homepage requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login",
+      "excludeRedirectQuery": false
+    }
+  },
+  "/login": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Login page is public",
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/signup": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Signup page is public", 
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/callback": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Callback page is public",
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/error": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Error page is public",
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/prompt-password/*": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Prompt password is public",
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/reset-password/*": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Reset password is public", 
+            "rule": "public"
+          }
+        ],
+        "operator": "OR"
+      }
+    }
+  },
+  "/category/*": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Category pages require authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/priority/*": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Priority pages require authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/overdue": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Overdue page requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/today": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Today page requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/upcoming": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Upcoming page requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/completed": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Completed page requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  }
+}

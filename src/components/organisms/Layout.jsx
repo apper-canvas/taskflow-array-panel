@@ -2,10 +2,17 @@ import React, { useState } from "react"
 import { Outlet } from "react-router-dom"
 import Sidebar from "@/components/organisms/Sidebar"
 import Header from "@/components/organisms/Header"
+import { useAuth } from "@/layouts/Root"
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [showQuickAdd, setShowQuickAdd] = useState(false)
+  const { isAuthenticated } = useAuth()
+
+  // Redirect if not authenticated - handled by route guards
+  if (!isAuthenticated) {
+    return null;
+  }
 
   const handleMenuClick = () => {
     setSidebarOpen(!sidebarOpen)
